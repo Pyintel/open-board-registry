@@ -29,5 +29,20 @@ module.exports = {
         db.close();
       }
     }
+  },
+  count_boards: {
+    description: "Get the exact total count of development boards available in the registry.",
+    args: {},
+    async execute() {
+      const dbPath = path.join(__dirname, "..", "boards.db");
+      if (!fs.existsSync(dbPath)) return "Board database file not found in module.";
+      const db = new Database(dbPath, { readonly: true });
+      try {
+        const row = db.query("SELECT COUNT(*) as total FROM boards").get();
+        return JSON.stringify({ total_boards: row ? row.total : 0 }, null, 2);
+      } finally {
+        db.close();
+      }
+    }
   }
 };
