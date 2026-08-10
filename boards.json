@@ -1,5 +1,52 @@
 [
   {
+    "id": "athera_motion_core",
+    "name": "Athera Motion Core",
+    "vendor": "Pyintel / Athera Controls",
+    "platform": "raspberrypi",
+    "mcu": "RP2350",
+    "cpu_arch": "cortex-m33 / hazard3",
+    "fcpu_hz": 150000000,
+    "ram_bytes": 524288,
+    "rom_bytes": 16777216,
+    "vids": [
+      "2E8A"
+    ],
+    "pids": [
+      "0009"
+    ],
+    "connectivity": [
+      "can-fd",
+      "i2c",
+      "qwiic"
+    ],
+    "frameworks": [
+      "picosdk",
+      "apex-bsp-rp2350",
+      "micropython"
+    ],
+    "protocols": [
+      "swd",
+      "picotool"
+    ],
+    "url": "https://pyintel.cc",
+    "voltage": "7V-24V DC input (3.3V logic)",
+    "screen": 0,
+    "peripherals": [
+      "CAN-FD PHY",
+      "4x MOSFET channels",
+      "Dual Quadrature Encoder PIO",
+      "I2C0 EEPROM Auto-Discovery"
+    ],
+    "interfaces": [
+      "GPIO",
+      "CAN",
+      "I2C",
+      "UART",
+      "SWD"
+    ]
+  },
+  {
     "id": "1bitsy_stm32f415rgt",
     "name": "1Bitsy",
     "vendor": "1BitSquared",
