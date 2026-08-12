@@ -1,0 +1,23 @@
+{
+  "name": "@pyintel/arc-module-board-registry",
+  "version": "1.0.0",
+  "description": "Board Registry Module for Apex Arc",
+  "author": "Pyintel",
+  "keywords": [
+    "pyintel-arc-module",
+    "arc-module"
+  ],
+  "files": [
+    "ARC",
+    "skills",
+    "tools",
+    "README.md",
+    "boards.db",
+    "boards.json",
+    "boards_vector.db"
+  ],
+  "scripts": {
+    "test": "echo \"No test specified\"",
+    "build": "echo \"No build required\""
+  }
+}
