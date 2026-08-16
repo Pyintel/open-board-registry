@@ -1,6 +1,6 @@
 {
   "name": "open-board-registry",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Board Registry Module for Apex Arc",
   "tools": [
     "tools/board-spec.js"
