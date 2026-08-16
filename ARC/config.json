@@ -1,0 +1,15 @@
+{
+  "name": "open-board-registry",
+  "version": "1.0.1",
+  "description": "Board Registry Module for Apex Arc",
+  "tools": [
+    "tools/board-spec.js"
+  ],
+  "skills": [
+    "skills/board-lookup/SKILL.md",
+    "skills/board-search/SKILL.md"
+  ],
+  "permissions": [
+    "fs"
+  ]
+}
