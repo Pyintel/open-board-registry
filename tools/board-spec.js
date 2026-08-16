@@ -58,3 +58,6 @@ export const count_boards = {
     return JSON.stringify({ total_boards: boards.length }, null, 2);
   }
 };
+
+export const hw_board_registry = query_board_spec;
+export const board_spec = query_board_spec;

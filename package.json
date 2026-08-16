@@ -1,6 +1,6 @@
 {
   "name": "@pyintel/arc-module-board-registry",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "description": "Board Registry Module for Apex Arc",
   "author": "Pyintel",
