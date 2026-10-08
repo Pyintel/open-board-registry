@@ -111,7 +111,7 @@ def run_training(
     dtype = torch.bfloat16 if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else torch.float32
     model = AutoModelForCausalLM.from_pretrained(
         base_model_id,
-        torch_dtype=dtype,
+        dtype=dtype,
         device_map="auto" if torch.cuda.is_available() else None
     )
     
@@ -143,7 +143,7 @@ def run_training(
         gradient_accumulation_steps=grad_accum,
         learning_rate=lr,
         lr_scheduler_type="cosine",
-        warmup_ratio=0.05,
+        warmup_steps=100,
         weight_decay=0.01,
         logging_steps=10,
         eval_strategy="epoch",
