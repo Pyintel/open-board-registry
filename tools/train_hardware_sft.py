@@ -185,7 +185,7 @@ def run_training(
     if push_to_hub and token:
         print(f"📡 Publishing fine-tuned adapter to Hugging Face ({HF_REPO_ID})...")
         try:
-            create_repo(repo_id=HF_REPO_ID, exist_ok=True, token=token)
+            create_repo(repo_id=HF_REPO_ID, private=True, exist_ok=True, token=token)
             api = HfApi(token=token)
             api.upload_folder(
                 folder_path=str(final_output),
@@ -193,7 +193,7 @@ def run_training(
                 repo_type="model",
                 commit_message=f"Release: PyIntel Embedded Architect LoRA weights ({base_model_id})"
             )
-            print(f"🎉 Model is live at: https://huggingface.co/{HF_REPO_ID}")
+            print(f"🎉 Model is live (Private) at: https://huggingface.co/{HF_REPO_ID}")
         except Exception as e:
             print(f"HF upload error: {e}")
 
